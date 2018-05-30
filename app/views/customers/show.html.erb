@@ -1,0 +1,48 @@
+<p>
+  <strong>CUSTNO:</strong>
+  <%= @customer.custno %>
+</p>
+ 
+ <p>
+  <strong>CUSTNAME:</strong>
+  <%= @customer.custname %>
+</p>
+ 
+<p>
+  <strong>ADDRESS:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>INTERNAL:</strong>
+  <%= @customer.internal %>
+</p>
+
+<p>
+  <strong>CONTACT:</strong>
+  <%= @customer.contact %>
+</p>
+
+<p>
+  <strong>PHONE:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>CITY:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>STATE:</strong>
+  <%= @customer.state %>
+</p>
+
+<p>
+  <strong>ZIP:</strong>
+  <%= @customer.zip %>
+</p>
+
+<%= link_to 'New customer', new_customer_path %> |
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

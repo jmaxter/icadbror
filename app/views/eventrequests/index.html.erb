@@ -1,0 +1,38 @@
+<h1>ICADB - Event Request</h1>
+<%= link_to 'Home', controller: 'welcome' %> |
+<%= link_to 'New eventrequest', new_eventrequest_path %>
+
+<table>
+  <tr>
+    <th>Eventno</th>
+    <th>Date held</th>
+    <th>Date req</th>
+    <th>Custno</th>
+    <th>Facno</th>
+    <th>Date auth</th>
+    <th>Status</th>
+    <th>Est. cost</th>
+    <th>Est. audience</th>
+    <th>Budget Number</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @eventrequests.each do |eventrequest| %>
+    <tr>
+      <td><%= eventrequest.eventno %></td>
+      <td><%= eventrequest.dateheld %></td>
+      <td><%= eventrequest.datereq %></td>
+      <td><%= eventrequest.custno %></td>
+      <td><%= eventrequest.facno %></td>
+      <td><%= eventrequest.dateauth %></td>
+      <td><%= eventrequest.status %></td>
+      <td><%= eventrequest.estcost %></td>
+      <td><%= eventrequest.estaudience %></td>
+      <td><%= eventrequest.budno %></td>
+      <td><%= link_to 'Show', eventrequest_path(eventrequest) %></td>
+      <td><%= link_to 'Edit', edit_eventrequest_path(eventrequest) %></td>
+      <td><%= link_to 'Destroy', eventrequest_path(eventrequest),
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

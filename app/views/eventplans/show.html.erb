@@ -1,0 +1,33 @@
+<p>
+  <strong>PLANNO:</strong>
+  <%= @eventplan.planno %>
+</p>
+ 
+ <p>
+  <strong>EVENTNO:</strong>
+  <%= @eventplan.eventno %>
+</p>
+ 
+<p>
+  <strong>WORKDATE:</strong>
+  <%= @eventplan.workdate %>
+</p>
+
+<p>
+  <strong>NOTES:</strong>
+  <%= @eventplan.notes %>
+</p>
+
+<p>
+  <strong>ACTIVITY:</strong>
+  <%= @eventplan.activity %>
+</p>
+
+<p>
+  <strong>EMPNO:</strong>
+  <%= @eventplan.empno %>
+</p>
+
+<%= link_to 'New eventplan', new_eventplan_path %> |
+<%= link_to 'Edit', edit_eventplan_path(@eventplan) %> |
+<%= link_to 'Back', eventplans_path %>

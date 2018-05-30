@@ -1,0 +1,23 @@
+<h1>ICADB - Facilities</h1>
+ 
+<%= link_to 'Home', controller: 'welcome' %> |
+<%= link_to 'New facicily', new_facility_path %>
+
+<table>
+  <tr>
+    <th>Facno</th>
+    <th>Facname</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @facilities.each do |facility| %>
+    <tr>
+      <td><%= facility.facno %></td>
+      <td><%= facility.facname %></td>
+      <td><%= link_to 'Show', facility_path(facility) %></td>
+      <td><%= link_to 'Edit', edit_facility_path(facility) %></td>
+      <td><%= link_to 'Destroy', facility_path(facility),
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

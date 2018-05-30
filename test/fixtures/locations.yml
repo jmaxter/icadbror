@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  locno: MyString
+  locname: MyString
+  facility_id: 
+
+two:
+  locno: MyString
+  locname: MyString
+  facility_id: 

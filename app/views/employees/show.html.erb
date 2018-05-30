@@ -1,0 +1,29 @@
+<p>
+  <strong>EMPNO:</strong>
+  <%= @employee.empno %>
+</p>
+ 
+ <p>
+  <strong>EMPNAME:</strong>
+  <%= @employee.empname %>
+</p>
+ 
+<p>
+  <strong>DEPARTMENT:</strong>
+  <%= @employee.department %>
+</p>
+
+<p>
+  <strong>EMAIL:</strong>
+  <%= @employee.email %>
+</p>
+
+<p>
+  <strong>PHONE:</strong>
+  <%= @employee.phone %>
+</p>
+
+
+<%= link_to 'New employee', new_employee_path %> |
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>

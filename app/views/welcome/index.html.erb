@@ -1,0 +1,39 @@
+<h1>Intercollegiate Athletic Database - ICADBROR</h1>
+<p>A test Ruby on Rails application.</p>
+<li><%= link_to 'Background Info', controller: 'welcome', action: 'info' %></li>
+
+<h2>Tables CRUD</h2>
+<ul>
+    <li><%= link_to 'Facilities', controller: 'facilities' %></li>
+    <li><%= link_to 'Locations', controller: 'locations' %></li>
+    <li><%= link_to 'Resources', controller: 'resources' %></li>
+    <li><%= link_to 'Customers', controller: 'customers' %></li>
+    <li><%= link_to 'Employees', controller: 'employees' %></li>
+    <li><%= link_to 'Event Plans', controller: 'eventplans' %></li>
+    <li><%= link_to 'Event Plan Lines', controller: 'eventplanlines' %></li>
+    <li><%= link_to 'Events Requests', controller: 'eventrequests' %></li>
+</ul>
+
+<h2>Done so far...</h2>
+<ul>
+    <li>Model/CRUD: model relations, forms validation (presence)</li>
+    <li>View: Make links from here to CRUD each table records</li>
+    
+</ul>
+
+<h2>To-Do...</h2> 
+<ul>
+    <li>Model/DB: make real table constraints(pk, fk, pk+fk, not null), not a model_id reference column</li>
+    <li>On delete cascade</li>
+    <li>usar decimal en lugar de float</li>
+    <li>representación y formato de fecha y hora</li>
+    <li>Nesting resources.. facilities->locations, etc...</li>
+    <li>Crear y Actualizar eventplanlines desde la vista de eventplans, están estrechamente relacionadas</li>
+    <li>El resto de las validaciones y asociaciones en el model... cuando tenga claro los constraints de tabla</li>
+    <li>Controller+View: Confirmar la informacion antes del commit a la tabla</li>
+    <li>View: Usar bootstrap</li>
+    <li>Basic authentication</li>
+    <li>Probar activeadmin (like django admin site)</li>
+    <li>Turn this done/pending section into a nice checklist with bootstrap</li>
+</ul>
+

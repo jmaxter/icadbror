@@ -1,0 +1,28 @@
+<h1>ICADB - Employee</h1>
+<%= link_to 'Home', controller: 'welcome' %> |
+<%= link_to 'New employee', new_employee_path %>
+
+<table>
+  <tr>
+    <th>Empno</th>
+    <th>Empname</th>
+    <th>Department</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @employees.each do |employee| %>
+    <tr>
+      <td><%= employee.empno %></td>
+      <td><%= employee.empname %></td>
+      <td><%= employee.department %></td>
+      <td><%= employee.email %></td>
+      <td><%= employee.phone %></td>
+      <td><%= link_to 'Show', employee_path(employee) %></td>
+      <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+      <td><%= link_to 'Destroy', employee_path(employee),
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,30 @@
+<%= form_for @facility do |f| %>
+ 
+  <% if @facility.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        There are <%= pluralize(@facility.errors.count, "error") %>:
+      </h2>
+      <ul>
+        <% @facility.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :facno %><br>
+    <%= f.text_field :facno %>
+  </p>
+ 
+  <p>
+    <%= f.label :facname %><br>
+    <%= f.text_field :facname %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

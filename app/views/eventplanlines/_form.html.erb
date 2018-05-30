@@ -1,0 +1,55 @@
+<%= form_for @eventplanline do |f| %>
+ 
+  <% if @eventplanline.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        There are <%= pluralize(@eventplanline.errors.count, "error") %>:
+      </h2>
+      <ul>
+        <% @eventplanline.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :planno %><br>
+    <%= f.text_field :planno %>
+  </p>
+  
+  <p>
+    <%= f.label :lineno %><br>
+    <%= f.text_field :lineno %>
+  </p>
+  
+  <p>
+    <%= f.label :timestart %><br>
+    <%= f.text_field :timestart %>
+  </p>
+  
+  <p>
+    <%= f.label :timeend %><br>
+    <%= f.text_field :timeend %>
+  </p>
+  
+  <p>
+    <%= f.label :numberfld %><br>
+    <%= f.text_field :numberfld %>
+  </p>
+  
+  <p>
+    <%= f.label :locno %><br>
+    <%= f.text_field :locno %>
+  </p>
+  
+  <p>
+    <%= f.label :resno %><br>
+    <%= f.text_field :resno %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

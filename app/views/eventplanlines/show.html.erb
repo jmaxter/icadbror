@@ -1,0 +1,38 @@
+<p>
+  <strong>PLANNO:</strong>
+  <%= @eventplanline.planno %>
+</p>
+ 
+ <p>
+  <strong>LINENO:</strong>
+  <%= @eventplanline.lineno %>
+</p>
+ 
+<p>
+  <strong>TIME START:</strong>
+  <%= @eventplanline.timestart %>
+</p>
+
+<p>
+  <strong>TIME END:</strong>
+  <%= @eventplanline.timeend %>
+</p>
+
+<p>
+  <strong>NUMBERFLD:</strong>
+  <%= @eventplanline.numberfld %>
+</p>
+
+<p>
+  <strong>LOCNO:</strong>
+  <%= @eventplanline.locno %>
+</p>
+
+<p>
+  <strong>RESNO:</strong>
+  <%= @eventplanline.resno %>
+</p>
+
+<%= link_to 'New eventplanline', new_eventplanline_path %> |
+<%= link_to 'Edit', edit_eventplanline_path(@eventplanline) %> |
+<%= link_to 'Back', eventplanlines_path %>

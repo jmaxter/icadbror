@@ -1,0 +1,13 @@
+<p>
+  <strong>FACNO:</strong>
+  <%= @facility.facno %>
+</p>
+ 
+<p>
+  <strong>FACNAME:</strong>
+  <%= @facility.facname %>
+</p>
+
+<%= link_to 'New facicily', new_facility_path %> |
+<%= link_to 'Edit', edit_facility_path(@facility) %> |
+<%= link_to 'Back', facilities_path %>

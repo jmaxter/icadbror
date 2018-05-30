@@ -1,0 +1,36 @@
+<%= form_for @location do |f| %>
+ 
+  <% if @location.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        There are <%= pluralize(@location.errors.count, "error") %>:
+      </h2>
+      <ul>
+        <% @location.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :locno %><br>
+    <%= f.text_field :locno %>
+  </p>
+  
+  <p>
+    <%= f.label :facno %><br>
+    <% # esto aqui deberia ser una fk real %>
+    <%= f.text_field :facno %>
+  </p>
+  
+  <p>
+    <%= f.label :locname %><br>
+    <%= f.text_field :locname %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

@@ -1,0 +1,18 @@
+<p>
+  <strong>LOCNO:</strong>
+  <%= @location.locno %>
+</p>
+ 
+ <p>
+  <strong>FACNO:</strong>
+  <%= @location.facno %>
+</p>
+ 
+<p>
+  <strong>LOCANAME:</strong>
+  <%= @location.locname %>
+</p>
+
+<%= link_to 'New Location', new_location_path %> |
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

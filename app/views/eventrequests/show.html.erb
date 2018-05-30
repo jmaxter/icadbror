@@ -1,0 +1,53 @@
+<p>
+  <strong>EVENTNO:</strong>
+  <%= @eventrequest.eventno %>
+</p>
+ 
+ <p>
+  <strong>DATE HELD:</strong>
+  <%= @eventrequest.dateheld %>
+</p>
+ 
+<p>
+  <strong>DATE REQUIRED:</strong>
+  <%= @eventrequest.datereq %>
+</p>
+
+<p>
+  <strong>CUSTNO:</strong>
+  <%= @eventrequest.custno %>
+</p>
+
+<p>
+  <strong>FACNO:</strong>
+  <%= @eventrequest.facno %>
+</p>
+
+<p>
+  <strong>DATE AUTH.:</strong>
+  <%= @eventrequest.dateauth %>
+</p>
+
+<p>
+  <strong>STATUS:</strong>
+  <%= @eventrequest.status %>
+</p>
+
+<p>
+  <strong>EST. COST:</strong>
+  <%= @eventrequest.estcost %>
+</p>
+
+<p>
+  <strong>EST. AUDIENCE:</strong>
+  <%= @eventrequest.estaudience %>
+</p>
+
+<p>
+  <strong>BUDGET NO.:</strong>
+  <%= @eventrequest.budno %>
+</p>
+
+<%= link_to 'New eventrequest', new_eventrequest_path %> |
+<%= link_to 'Edit', edit_eventrequest_path(@eventrequest) %> |
+<%= link_to 'Back', eventrequests_path %>

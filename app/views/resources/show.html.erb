@@ -1,0 +1,18 @@
+<p>
+  <strong>RESNO:</strong>
+  <%= @resource.resno %>
+</p>
+ 
+ <p>
+  <strong>RESNAME:</strong>
+  <%= @resource.resname %>
+</p>
+ 
+<p>
+  <strong>RATE:</strong>
+  <%= @resource.rate %>
+</p>
+
+<%= link_to 'New Location', new_resource_path %> |
+<%= link_to 'Edit', edit_resource_path(@resource) %> |
+<%= link_to 'Back', resources_path %>

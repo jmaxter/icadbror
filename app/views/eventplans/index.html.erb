@@ -1,0 +1,30 @@
+<h1>ICADB - Event Plan</h1>
+<%= link_to 'Home', controller: 'welcome' %> |
+<%= link_to 'New eventplan', new_eventplan_path %>
+
+<table>
+  <tr>
+    <th>Planno</th>
+    <th>Eventno</th>
+    <th>Workdate</th>
+    <th>Notes</th>
+    <th>Activity</th>
+    <th>Empno</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @eventplans.each do |eventplan| %>
+    <tr>
+      <td><%= eventplan.planno %></td>
+      <td><%= eventplan.eventno %></td>
+      <td><%= eventplan.workdate %></td>
+      <td><%= eventplan.notes %></td>
+      <td><%= eventplan.activity %></td>
+      <td><%= eventplan.empno %></td>
+      <td><%= link_to 'Show', eventplan_path(eventplan) %></td>
+      <td><%= link_to 'Edit', edit_eventplan_path(eventplan) %></td>
+      <td><%= link_to 'Destroy', eventplan_path(eventplan),
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

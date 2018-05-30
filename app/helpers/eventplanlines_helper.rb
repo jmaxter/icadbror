@@ -1,0 +1,2 @@
+module EventplanlinesHelper
+end

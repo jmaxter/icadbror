@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eventno: MyString
+  dateheld: 2018-05-29
+  datereq: 2018-05-29
+  custno: MyString
+  facno: MyString
+  dateauth: 2018-05-29
+  status: MyString
+  estcost: 9.99
+  estaudience: 1
+  budno: MyString
+
+two:
+  eventno: MyString
+  dateheld: 2018-05-29
+  datereq: 2018-05-29
+  custno: MyString
+  facno: MyString
+  dateauth: 2018-05-29
+  status: MyString
+  estcost: 9.99
+  estaudience: 1
+  budno: MyString

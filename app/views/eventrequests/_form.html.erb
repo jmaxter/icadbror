@@ -1,0 +1,70 @@
+<%= form_for @eventrequest do |f| %>
+ 
+  <% if @eventrequest.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        There are <%= pluralize(@eventrequest.errors.count, "error") %>:
+      </h2>
+      <ul>
+        <% @eventrequest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :eventno %><br>
+    <%= f.text_field :eventno %>
+  </p>
+  
+  <p>
+    <%= f.label :dateheld %><br>
+    <%= f.text_field :dateheld %>
+  </p>
+  
+    <p>
+    <%= f.label :datereq %><br>
+    <%= f.text_field :datereq %>
+  </p>
+  
+  <p>
+    <%= f.label :custno %><br>
+    <%= f.text_field :custno %>
+  </p>
+  
+  <p>
+    <%= f.label :facno %><br>
+    <%= f.text_field :facno %>
+  </p>
+  
+  <p>
+    <%= f.label :dateauth %><br>
+    <%= f.text_field :dateauth %>
+  </p>
+  
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+  
+  <p>
+    <%= f.label :estcost %><br>
+    <%= f.text_field :estcost %>
+  </p>
+  
+  <p>
+    <%= f.label :estaudience %><br>
+    <%= f.text_field :estaudience %>
+  </p>
+  
+  <p>
+    <%= f.label :budno %><br>
+    <%= f.text_field :budno %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

@@ -1,0 +1,36 @@
+<h1>ICADB - Customer</h1>
+<%= link_to 'Home', controller: 'welcome' %> |
+<%= link_to 'New customer', new_customer_path %>
+
+<table>
+  <tr>
+    <th>Custno</th>
+    <th>Custname</th>
+    <th>Address</th>
+    <th>Internal</th>
+    <th>Contact</th>
+    <th>Phone</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @customers.each do |customer| %>
+    <tr>
+      <td><%= customer.custno %></td>
+      <td><%= customer.custname %></td>
+      <td><%= customer.address %></td>
+      <td><%= customer.internal %></td>
+      <td><%= customer.contact %></td>
+      <td><%= customer.phone %></td>
+      <td><%= customer.city %></td>
+      <td><%= customer.state %></td>
+      <td><%= customer.zip %></td>
+      <td><%= link_to 'Show', customer_path(customer) %></td>
+      <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+      <td><%= link_to 'Destroy', customer_path(customer),
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

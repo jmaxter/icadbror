@@ -1,0 +1,35 @@
+<%= form_for @resource do |f| %>
+ 
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        There are <%= pluralize(@resource.errors.count, "error") %>:
+      </h2>
+      <ul>
+        <% @resource.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :resno %><br>
+    <%= f.text_field :resno %>
+  </p>
+  
+  <p>
+    <%= f.label :resname %><br>
+    <%= f.text_field :resname %>
+  </p>
+  
+  <p>
+    <%= f.label :rate %><br>
+    <%= f.text_field :rate %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

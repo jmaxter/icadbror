@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planno: MyString
+  eventno: MyString
+  workdate: 2018-05-29
+  notes: MyText
+  activity: MyString
+  empno: MyString
+
+two:
+  planno: MyString
+  eventno: MyString
+  workdate: 2018-05-29
+  notes: MyText
+  activity: MyString
+  empno: MyString
